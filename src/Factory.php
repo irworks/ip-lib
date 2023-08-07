@@ -118,6 +118,9 @@ class Factory
             $result = Range\Pattern::parseString($range, $flags);
         }
         if ($result === null) {
+            $result = Range\Range::parseString($range, $flags);
+        }
+        if ($result === null) {
             $result = Range\Single::parseString($range, $flags);
         }
 
